@@ -1,1 +1,3 @@
 Place scripts for recreating your paper's figures in this directory. Update this `README.md` with instructions for figure reproduction.
+
+File calculate_thresholds_Figure2.R does 2 steps. (1) It calculates the wet vs paper right threshold for each WMA, based on hydro model output. The result of this step is provided in this folder, in 2 data files called wma_threshold_dates_Scenario2.csv and wma_threshold_dates_Scenario2a.csv. (2) The script uses the 2 provided data files to make the maps shown in Figure 2.  To fully reproduce these maps, you will need to download the WMA shapefile from https://data.msdlive.org/records/v5ree-qj344 and the US State shapefile from https://www.census.gov/geographies/mapping-files/2015/geo/carto-boundary-file.html 
