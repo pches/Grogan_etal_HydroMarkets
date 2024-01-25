@@ -135,7 +135,7 @@ for(mod.name in mod.nm.list){
   
 }  ### End of calculations
 
-### NOTE: for reproducibility, the following files have been provided in this repo:
+### NOTE: for reproducibility, the following files are available on MSDlive:
 # wma_threshold_dates_Scenario2.csv      This is the output for Scenario 2, shown in Figure 2A
 # wma_threshold_dates_Scenario2a.csv     This is the output for Scenario 2a, shown in Figure 2B
 
