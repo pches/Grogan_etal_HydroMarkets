@@ -86,7 +86,7 @@ mod.nm.list = c("Scenario2",    # Scenario 2: Water rights without trading, as s
                 "Scenario2a"    # Scenario 2a: Water rights without trading, with groundwater constraint
 )
 
-# directory name where model output is stored
+# directory name where WBM model output is stored. This data is available in MSDlive: https://doi.org/10.57931/2283495
 mod.dir = # model directory
   
 # directory name for saving calculation results:
@@ -136,7 +136,7 @@ for(mod.name in mod.nm.list){
 }  ### End of calculations
 
 ### NOTE: for reproducibility, the following files are available on MSDlive:
-# wma_threshold_dates_Scenario2.csv      This is the output for Scenario 2, shown in Figure 2A
+# wma_threshold_dates_Scenario2.csv      This is the output for Scenario 2, shown in Figure 2A. These files are available on MSDlive (https://doi.org/10.57931/2283495) to check for accurate reproduction
 # wma_threshold_dates_Scenario2a.csv     This is the output for Scenario 2a, shown in Figure 2B
 
 
