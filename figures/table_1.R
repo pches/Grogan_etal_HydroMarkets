@@ -116,7 +116,6 @@ calculate_state_and_region_sums = function(wbm.path, scenario){
 
 # state shapefile is available from the US Census Bureau: https://www.census.gov/geographies/mapping-files/2015/geo/carto-boundary-file.html
 states = readOGR('cb_2015_us_state_500k/', 'cb_2015_us_state_500k')
-# states = readOGR("/net/nfs/squam/raid/userdata/dgrogan/data/map_data/cb_2015_us_state_500k/", "cb_2015_us_state_500k")
 
 states.wecc = states[states$NAME == "Idaho" | 
                        states$NAME == "Washington" | 
@@ -134,11 +133,12 @@ states.wecc = states[states$NAME == "Idaho" |
 # File paths and scenario names
 ####################################################################################################################################
 
-wbm.path.list = c("/net/nfs/squam/raid/data/WBM_TrANS/DOE/Water_Institutions/WatInst_noPolicy_v25",
-                  "/net/nfs/squam/raid/data/WBM_TrANS/DOE/Water_Institutions/WatInst_noMarketMod_v25",
-                  "/net/nfs/squam/raid/data/WBM_TrANS/DOE/Water_Institutions/WatInst_noMarketMod_sgma_v25",
-                  "/net/nfs/squam/raid/data/WBM_TrANS/DOE/Water_Institutions/WatInst_waterMarket_v25",
-                  "/net/nfs/squam/raid/data/WBM_TrANS/DOE/Water_Institutions/WatInst_waterMarket_sgma_v25")
+# WBM output files with the following directory names (zip archives) are available on MSDLive: https://doi.org/10.57931/2283495                                        
+wbm.path.list = c("scenario_1_wbm_output/",
+                  "scenario_2_wbm_output/",
+                  "scenario_2a_wbm_output/",
+                  "scenario_3_wbm_output/",
+                  "scenario_3a_wbm_output/")
                   
 scenario.list = c("scenario1",   # Scenario 1:  Siloed hydrology model
                   "scenario2",   # Scenario 2:  Hydrology model with water rights but no water market
@@ -215,4 +215,4 @@ table_1[9,] = table_1[5,] - table_1[4,]  # scen3a_minus_scen3
 table_1 = signif(table_1, 3)
 
 # save to file
-write.csv(table_1, "results/Table_1/Table_1.csv")
+write.csv(table_1, "results/Table_1/Table_1.csv")  # This file is available to check for accurate reproduction: https://doi.org/10.57931/2283495    
