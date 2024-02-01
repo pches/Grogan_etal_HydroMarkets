@@ -36,7 +36,7 @@ trade.reg = readOGR("WWRTradeBounds/", "WWRtradeBounds")
 
 ### Welfare data
 # actual trades
-welfare_actual_file = load("data/welfare_data/welfare_data_actual.rdata")  # data provided on MSDlive
+welfare_actual_file = load("data/welfare_data/welfare_data_actual.rdata")  # data provided on MSDlive: https://doi.org/10.57931/2283495
 welfare_actual_sf   = get(welfare_actual_file[1])
 welfare_actual_city = get(welfare_actual_file[2]) # locations of major cities. Use for context on panel A
 
@@ -44,15 +44,15 @@ welfare_actual_city = get(welfare_actual_file[2]) # locations of major cities. U
 welfare_city_sp = as_Spatial(welfare_actual_city)
 
 # simulated trades
-welfare_sim_file = load("data/welfare_data/welfare_data_simulated.rdata")  # data provided  on MSDlive
+welfare_sim_file = load("data/welfare_data/welfare_data_simulated.rdata")  # data provided  on MSDlive: https://doi.org/10.57931/2283495
 welfare_sim_sf   = get(welfare_sim_file[1])
 
 # simulated with wet/paper threshold 
-welfare_sim_t_file = load("data/welfare_data/welfare_data_simulated_cutoffs.rdata")  # data provided on MSDlive
+welfare_sim_t_file = load("data/welfare_data/welfare_data_simulated_cutoffs.rdata")  # data provided on MSDlive: https://doi.org/10.57931/2283495
 welfare_sim_t_sf   = get(welfare_sim_t_file[1])
 
 # simulated with thresholds and SGMA
-welfare_sim_sgma_file = load("data/welfare_data/welfare_data_simulated_cutoffs_SGMA.rdata")  # data provided on MSDlive
+welfare_sim_sgma_file = load("data/welfare_data/welfare_data_simulated_cutoffs_SGMA.rdata")  # data provided on MSDlive: https://doi.org/10.57931/2283495
 welfare_sim_sgma_sf   = get(welfare_sim_sgma_file[1])
 
 # make a spatial dataframe for plotting
@@ -213,7 +213,7 @@ library(ggplot2)
 ### Figure 3E: Region-wide welfare gain (total)
 
 ## load regional summary data
-dat = read.csv("data/welfare_region_totals.csv") # data provided in Github repo
+dat = read.csv("data/welfare_region_totals.csv") # data provided in MSDlive: https://doi.org/10.57931/2283495
 colnames(dat) = c("Scenario", "Total_gain", "Agricultural_gain", "Urban_gain")
 dat = dat[,c(-2)] # don't need this column
 dat$Scenario = c("Actual", "1", "3", "3a")
@@ -253,7 +253,7 @@ ggsave(filename = file.path(out.dir, "Figure3E.png"),
 ### Figure 3F: state-by-state welfare gains, percent by sector
 
 # load state-level data
-dat = read.csv("data/welfare_gain_by_state_sector.csv") # data provided in GitHub repo
+dat = read.csv("data/welfare_gain_by_state_sector.csv") # data provided in MSDlive: https://doi.org/10.57931/2283495
 
 # remove states with no welfare gains
 r = which(dat$state_name == "Wyoming" | dat$state_name == "Montana")
