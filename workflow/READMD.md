@@ -11,4 +11,3 @@ The general workflow of the model is to read in the HarDWR cumulative curves (ht
 
 The market model is / can be ran under various scenarios, and `hydroRealism_MarketModel.R` is capable of running any of them based on user input. The script requires a companion script, `hydroRealism_marketModel_CustomFunctions.R`, which contains a series of custom written functions for the analysis. Due some of the required R packages having been retired since the code was first written, a Singularity container has been created in order to preform this analysis. The definition file for said container, `waterRightAnalysis.def` is included to allow others access to the market modeling script without needing to completely replicate the retired environment on their own.
 
-## WBM
