@@ -15,3 +15,6 @@ Input data, intermediate processing steps, and output data useful for reproducin
 The hydrologic model described in Bringing Hydrologic Realism to Water Markets is a branch of the University of New Hampshire Water Balance Model, WBM. The main branch of WBM is available here: https://github.com/wsag/WBM, DOI 10.5281/zenodo.6263096. The water rights module described in the paper is available upon request from the authors, and will soon be downloadable from https://license.unh.edu/products/Software 
 
 Contact info: danielle.grogan@unh.edu
+
+## System requirements:
+This code is written in standard R and Python coding languages. No special hardware or system requirements necessary. The R code requires use of the raster package for some processing. All processing can be done on a regular desktop computer.  
